@@ -73,16 +73,59 @@
 # name = 'world'
 # print('Hello, {}'.format(name))
 
-a_dict = {'color': 'blue', 'fruit': 'apple', 'pet': 'dog'}
-# d_items = a_dict.items()
+# a_dict = {'color': 'blue', 'fruit': 'apple', 'pet': 'dog'}
+# # d_items = a_dict.items()
 
-for item in a_dict.items():
-    print(item)
-    print(type(item))
+# for item in a_dict.items():
+#     print(item)
+#     print(type(item))
 
-for key in a_dict.keys():
-    print(key)
+# for key in a_dict.keys():
+#     print(key)
 
-prices = {'apple': 0.40, 'orange': 0.35, 'banana': 0.25}
-for k, v in prices.items():
-    prices[k] = round(v * 0.9, 2)
+# prices = {'apple': 0.40, 'orange': 0.35, 'banana': 0.25}
+# for k, v in prices.items():
+#     prices[k] = round(v * 0.9, 2)
+
+
+# print("TEST")
+
+# class Student:
+
+#     def __init__(self, name, major, gpa, is_on_probation):
+#         self.name = name
+#         self.major = major
+#         self.gpa = gpa
+#         self.is_on_probation = is_on_probation
+
+# student1 = Student("Jim", "Econ", 3.3, False)
+# student2 = Student("John", "Econ", 5.1, False)
+
+# print(student1.name)
+# print(student2.name, student2.gpa)
+
+from Question import Question
+
+question_prompts = [
+    "What color are apples?\n(a) Red/Green\n(b) Magenta\n(c) Orange\n\n",
+    "What color are oranges?\n(a) Red/Green\n(b) Magenta\n(c) Orange\n\n",
+    "What color are strawberries?\n(a) Red/Green\n(b) Magenta\n(c) Orange\n\n"
+]
+
+qs = [
+    Question(question_prompts[0], "a"),
+    Question(question_prompts[1], "c"),
+    Question(question_prompts[2], "a")
+]
+
+
+def run_test(questions):
+    score = 0
+    for question in qs:
+        ans = input(question.prompt)
+        if ans == question.ans:
+            score += 1
+    print(f'You got {str(score)}' + "/" + str(len(qs)) + " correct")
+
+
+run_test(qs)
