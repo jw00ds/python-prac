@@ -53,16 +53,36 @@
 # print(f'{color1} roses')
 # print(f'violets are {color2.lower()}')
 
-friends = ["Josh", "Craig"]
-friends2 = ["James", "Pete", "Cam"]
+# friends = ["Josh", "Craig"]
+# friends2 = ["James", "Pete", "Cam"]
+#
+# print(friends)
+# print(friends[1])
+# print(friends[-1])
+# print(friends[0:2])
+# friends.extend(friends2)
+# print(friends)
+# friends.append("Jake")
+# print(friends)
+#
+# name = 'world'
+# program ='python'
+# print('Hello %s! This is %s.'%(name, program))
+#
+#
+# name = 'world'
+# print('Hello, {}'.format(name))
 
-print(friends)
-print(friends[1])
-print(friends[-1])
-print(friends[0:2])
-friends.extend(friends2)
-print(friends)
-friends.append("Jake")
-print(friends)
+a_dict = {'color': 'blue', 'fruit': 'apple', 'pet': 'dog'}
+# d_items = a_dict.items()
 
+for item in a_dict.items():
+    print(item)
+    print(type(item))
 
+for key in a_dict.keys():
+    print(key)
+
+prices = {'apple': 0.40, 'orange': 0.35, 'banana': 0.25}
+for k, v in prices.items():
+    prices[k] = round(v * 0.9, 2)
